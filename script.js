@@ -1,19 +1,28 @@
-let count=0;
+let count = 0;
 
-function increasecount() {
-    count= count+1;
-    document.getElementById("count").textContent= count;
+function increaseCount() {
+  count = count + 1;
+  updateDisplay();
 }
-function decreasecount() {
-  if(count>0) {
-    count= count-1;
-    document.getElementById("count").textContent= count;
+
+function decreaseCount() {
+  if (count > 0) {
+    count = count - 1;
+    updateDisplay();
   }
 }
 
+function resetCount() {
+  count = 0;
+  updateDisplay();
+}
 
-function resetCount() { 
-    count= 0;
-    document.getElementById("count").textContent=count;
+function updateDisplay() {
+  document.getElementById("count").textContent = count;
 
-}   
+  if (count > 0) {
+    document.getElementById("count").style.color = "green";
+  } else {
+    document.getElementById("count").style.color = "black";
+  }
+}

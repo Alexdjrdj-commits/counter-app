@@ -23,6 +23,11 @@
 
 ## Bugs I Fixed
 
+- Fixed a JavaScript issue caused by function names not matching exactly. JavaScript is case-sensitive, so `increasecount()` and `increaseCount()` are different.
+- Used an `alert()` test to confirm that `script.js` was connected and running.
+- Refreshed/reopened Live Server when the browser seemed to be using an old version of the JavaScript file.
+
+
 ## Things I Learned
 
 - I learned how to use a variable to store a changing number.
